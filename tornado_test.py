@@ -12,7 +12,6 @@ define("port", default=8080, help="run on the given port", type=int)
 
 class MainHandler(tornado.web.RequestHandler):
     def get(self):
-        self.write("Hello, world")
         self.set_header('Content-Type', 'application/json')
         self.write(json.dumps({'hello': 'world'}))
 

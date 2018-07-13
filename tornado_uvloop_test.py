@@ -11,7 +11,6 @@ import uvloop
 
 class ReqHandler(tornado.web.RequestHandler):
     async def get(self):
-        await asyncio.sleep(.25)
         self.set_header('Content-Type', 'application/json')
         self.write(json.dumps({'hello': 'world'}))
 
